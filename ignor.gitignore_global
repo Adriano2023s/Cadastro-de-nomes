@@ -1,0 +1,48 @@
+# Compiled object files
+*.o
+*.dll
+*.exe
+*.log
+
+# Auto-generated files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.sln.ide.config
+
+# Build directories
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Visual Studio Code
+.vscode/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+# The packages folder can be ignored because of NuGet restore
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# File system logs
+*.DS_Store
+*.directory
+
+# Visual Studio temporary files
+.vs/
