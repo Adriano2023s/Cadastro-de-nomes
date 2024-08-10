@@ -1,0 +1,13 @@
+C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\obj\Debug\netcoreapp3.1\AdicionaNome.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\obj\Debug\netcoreapp3.1\AdicionaNome.AssemblyInfoInputs.cache
+C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\obj\Debug\netcoreapp3.1\AdicionaNome.AssemblyInfo.cs
+C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\obj\Debug\netcoreapp3.1\AdicionaNome.csproj.CoreCompileInputs.cache
+C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\bin\Debug\netcoreapp3.1\AdicionaNome.exe
+C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\bin\Debug\netcoreapp3.1\AdicionaNome.deps.json
+C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\bin\Debug\netcoreapp3.1\AdicionaNome.runtimeconfig.json
+C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\bin\Debug\netcoreapp3.1\AdicionaNome.runtimeconfig.dev.json
+C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\bin\Debug\netcoreapp3.1\AdicionaNome.dll
+C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\bin\Debug\netcoreapp3.1\AdicionaNome.pdb
+C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\obj\Debug\netcoreapp3.1\AdicionaNome.dll
+C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\obj\Debug\netcoreapp3.1\AdicionaNome.pdb
+C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\obj\Debug\netcoreapp3.1\AdicionaNome.genruntimeconfig.cache
