@@ -14,11 +14,13 @@ namespace AdicionaNome
                 Console.WriteLine("Escolha uma opção");
                 Console.WriteLine("Opção 1: Adicionar um novo nome");
                 Console.WriteLine("Opção 2: Imprimir a lista de nomes");
+                Console.WriteLine("Opção 3: Imprimir as pozições vazias");
                int opcao = int.Parse(Console.ReadLine());
 
                 switch (opcao)
                 {
                     case 1:
+                        
                         Console.WriteLine("Digite o nome que deseja adicionar");
                         string nome = Console.ReadLine();
 
@@ -35,8 +37,12 @@ namespace AdicionaNome
                         break;
 
                     
-                    case 2:
+               case 2:
                         ImprimeLista(nomes);
+                        break;
+
+                        case 3:
+                        ImprimeVasils(nomes);
                         break;
                 }
             }
@@ -59,7 +65,7 @@ namespace AdicionaNome
                     return;
                 }
             }
-        }
+}
 
         public static void ImprimeLista(string[] ListaNomes)
         {
@@ -71,7 +77,18 @@ if (!string.IsNullOrWhiteSpace(ListaNomes[i]))
                 }
             }
         }
+    
+        public static void ImprimeVasils(string[] ListaNomes)
+        {
+            for(int i = 0; i < ListaNomes.Length; i++)
+            {
+                if (string.IsNullOrWhiteSpace(ListaNomes[i]))
+                {
+                    Console.WriteLine($"A pozição vazia é: {i}: {ListaNomes[i]}");
+                }
+            }
         }
+    }
 }
     
 
