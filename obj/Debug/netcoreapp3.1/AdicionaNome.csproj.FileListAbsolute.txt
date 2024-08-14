@@ -11,3 +11,4 @@ C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\bin\Debug
 C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\obj\Debug\netcoreapp3.1\AdicionaNome.dll
 C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\obj\Debug\netcoreapp3.1\AdicionaNome.pdb
 C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\obj\Debug\netcoreapp3.1\AdicionaNome.genruntimeconfig.cache
+C:\Users\Home\OneDrive\Documentos\Adriano\C#\AdicionaNome\AdicionaNome\obj\Debug\netcoreapp3.1\AdicionaNome.sourcelink.json

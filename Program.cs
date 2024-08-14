@@ -13,8 +13,8 @@ namespace AdicionaNome
             {
                 Console.WriteLine("Escolha uma opção");
                 Console.WriteLine("Opção 1: Adicionar um novo nome");
-                Console.WriteLine("Opção 2: Sair");
-                int opcao = int.Parse(Console.ReadLine());
+                Console.WriteLine("Opção 2: Imprimir a lista de nomes");
+               int opcao = int.Parse(Console.ReadLine());
 
                 switch (opcao)
                 {
@@ -34,8 +34,9 @@ namespace AdicionaNome
                         }
                         break;
 
+                    
                     case 2:
-                        continuar = false;
+                        ImprimeLista(nomes);
                         break;
                 }
             }
@@ -58,9 +59,21 @@ namespace AdicionaNome
                     return;
                 }
             }
-
         }
-    }
+
+        public static void ImprimeLista(string[] ListaNomes)
+        {
+            for (int i = 0; i < ListaNomes.Length; i++)
+            {
+if (!string.IsNullOrWhiteSpace(ListaNomes[i]))
+                {
+                    Console.WriteLine($"Na pozição: {i}, {ListaNomes[i]}");
+                }
+            }
+        }
+        }
 }
+    
+
 
 
