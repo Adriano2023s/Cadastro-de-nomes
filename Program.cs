@@ -14,13 +14,13 @@ namespace AdicionaNome
                 Console.WriteLine("Escolha uma opção");
                 Console.WriteLine("Opção 1: Adicionar um novo nome");
                 Console.WriteLine("Opção 2: Imprimir a lista de nomes");
-                Console.WriteLine("Opção 3: Imprimir as pozições vazias");
-               int opcao = int.Parse(Console.ReadLine());
+                Console.WriteLine("Opção 3: Ordenar por ordem alfabética");
+                int opcao = int.Parse(Console.ReadLine());
 
                 switch (opcao)
                 {
                     case 1:
-                        
+
                         Console.WriteLine("Digite o nome que deseja adicionar");
                         string nome = Console.ReadLine();
 
@@ -36,61 +36,68 @@ namespace AdicionaNome
                         }
                         break;
 
-                    
-               case 2:
+
+                    case 2:
                         ImprimeLista(nomes);
                         break;
 
-                        case 3:
-                        ImprimeVasils(nomes);
+                    case 3:
+                        OrdenarNomes(nomes);
                         break;
                 }
-            }
-        }
-
-        public static void AddNome(string nome, string[] ListaNomes)
-        {
-            if (nome == null)
-            {
-                Console.WriteLine("Nome inválido, tente novamente");
-                return;
+                }
             }
 
-            for (int i = 0; i < ListaNomes.Length; i++)
+            public static void AddNome(string nome, string[] ListaNomes)
             {
-                if (ListaNomes[i] == null)
+                if (nome == null)
                 {
-                    ListaNomes[i] = nome;
-                    Console.WriteLine($"O nome: {nome}, foi adicionado na pozição: {i}");
+                    Console.WriteLine("Nome inválido, tente novamente");
                     return;
                 }
-            }
-}
 
-        public static void ImprimeLista(string[] ListaNomes)
-        {
-            for (int i = 0; i < ListaNomes.Length; i++)
-            {
-if (!string.IsNullOrWhiteSpace(ListaNomes[i]))
+                for (int i = 0; i < ListaNomes.Length; i++)
                 {
-                    Console.WriteLine($"Na pozição: {i}, {ListaNomes[i]}");
+                    if (ListaNomes[i] == null)
+                    {
+                        ListaNomes[i] = nome;
+                        Console.WriteLine($"O nome: {nome}, foi adicionado na pozição: {i}");
+                    break;
+                    }
+                }
+            }
+
+            public static void ImprimeLista(string[] ListaNomes)
+            {
+                for (int i = 0; i < ListaNomes.Length; i++)
+                {
+                    if (!string.IsNullOrWhiteSpace(ListaNomes[i]))
+                    {
+                        Console.WriteLine($"Na pozição: {i}, {ListaNomes[i]}");
+                                     }
+                }
+            }
+       
+    public static void OrdenarNomes(string[] ListaNomes)
+        {
+            int n = ListaNomes.Length;
+
+            for (int i = 0; i < n - 1; i++)
+            {
+            for(int j = 0; j < ListaNomes.Length; j++)
+                {
+                    if (string.Compare(ListaNomes[j], ListaNomes[j + 1]) > 0)
+                    {
+                        string temp = ListaNomes[j];
+                        ListaNomes[j] = ListaNomes[j + 1];
+                        ListaNomes[j + 1] = temp;
+                        return;
+                    }
                 }
             }
         }
-    
-        public static void ImprimeVasils(string[] ListaNomes)
-        {
-            for(int i = 0; i < ListaNomes.Length; i++)
-            {
-                if (string.IsNullOrWhiteSpace(ListaNomes[i]))
-                {
-                    Console.WriteLine($"A pozição vazia é: {i}: {ListaNomes[i]}");
-                }
-            }
+
         }
     }
-}
-    
-
-
-
+     
+        
