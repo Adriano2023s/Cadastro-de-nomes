@@ -15,6 +15,7 @@ namespace AdicionaNome
                 Console.WriteLine("Opção 1: Adicionar um novo nome");
                 Console.WriteLine("Opção 2: Imprimir a lista de nomes");
                 Console.WriteLine("Opção 3: Ordenar por ordem alfabética");
+                Console.WriteLine("Opção 4: Deletar um item");
                 int opcao = int.Parse(Console.ReadLine());
 
                 switch (opcao)
@@ -44,60 +45,83 @@ namespace AdicionaNome
                     case 3:
                         OrdenarNomes(nomes);
                         break;
-                }
+
+                    case 4:
+                        RemoveNome(nomes);
+                        break;
                 }
             }
+        }
 
-            public static void AddNome(string nome, string[] ListaNomes)
+        public static void AddNome(string nome, string[] ListaNomes)
+        {
+            if (nome == null)
             {
-                if (nome == null)
-                {
-                    Console.WriteLine("Nome inválido, tente novamente");
-                    return;
-                }
+                Console.WriteLine("Nome inválido, tente novamente");
+                return;
+            }
 
-                for (int i = 0; i < ListaNomes.Length; i++)
+            for (int i = 0; i < ListaNomes.Length; i++)
+            {
+                if (ListaNomes[i] == null)
                 {
-                    if (ListaNomes[i] == null)
-                    {
-                        ListaNomes[i] = nome;
-                        Console.WriteLine($"O nome: {nome}, foi adicionado na pozição: {i}");
+                    ListaNomes[i] = nome;
+                    Console.WriteLine($"O nome: {nome}, foi adicionado na pozição: {i}");
                     break;
-                    }
                 }
             }
+        }
 
-            public static void ImprimeLista(string[] ListaNomes)
+        public static void ImprimeLista(string[] ListaNomes)
+        {
+            for (int i = 0; i < ListaNomes.Length; i++)
             {
-                for (int i = 0; i < ListaNomes.Length; i++)
+                if (!string.IsNullOrWhiteSpace(ListaNomes[i]))
                 {
-                    if (!string.IsNullOrWhiteSpace(ListaNomes[i]))
-                    {
-                        Console.WriteLine($"Na pozição: {i}, {ListaNomes[i]}");
-                                     }
+                    Console.WriteLine($"Na pozição: {i}, {ListaNomes[i]}");
+
                 }
             }
-       
-    public static void OrdenarNomes(string[] ListaNomes)
+        }
+
+        public static void OrdenarNomes(string[] ListaNomes)
         {
             int n = ListaNomes.Length;
 
             for (int i = 0; i < n - 1; i++)
             {
-            for(int j = 0; j < ListaNomes.Length; j++)
+                for (int j = 0; j < n - i - 1; j++)
                 {
                     if (string.Compare(ListaNomes[j], ListaNomes[j + 1]) > 0)
                     {
                         string temp = ListaNomes[j];
                         ListaNomes[j] = ListaNomes[j + 1];
                         ListaNomes[j + 1] = temp;
-                        return;
+                        break;
                     }
                 }
             }
         }
 
-        }
+        public static void RemoveNome(string[] ListaNomes)
+        {
+            Console.WriteLine("Digite a pozição que deseja remover");
+            int pozicao = int.Parse(Console.ReadLine());
+
+            if (pozicao > 0 &&pozicao < ListaNomes.Length)
+            {
+                for ( int i = 0; i < pozicao; i++)
+                {
+                    ListaNomes[i] = ListaNomes[i + 1];
+                    }
+                Console.WriteLine("Nome removido!");
+            }
+            else
+            {
+                Console.WriteLine("A pozição digitada não existe, tente novamente");
+                return;    
+            }
+            }
+   
     }
-     
-        
+}
