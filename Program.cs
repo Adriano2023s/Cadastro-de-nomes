@@ -16,6 +16,7 @@ namespace AdicionaNome
                 Console.WriteLine("Opção 2: Imprimir a lista de nomes");
                 Console.WriteLine("Opção 3: Ordenar por ordem alfabética");
                 Console.WriteLine("Opção 4: Deletar um item");
+                Console.WriteLine("Opção 5: Adicionar um item em uma pozição específica");
                 int opcao = int.Parse(Console.ReadLine());
 
                 switch (opcao)
@@ -48,6 +49,10 @@ namespace AdicionaNome
 
                     case 4:
                         RemoveNome(nomes);
+                        break;
+
+                    case 5:
+                        AdicionarEspessifico(nomes);
                         break;
                 }
             }
@@ -108,20 +113,47 @@ namespace AdicionaNome
             Console.WriteLine("Digite a pozição que deseja remover");
             int pozicao = int.Parse(Console.ReadLine());
 
-            if (pozicao > 0 &&pozicao < ListaNomes.Length)
+            if (pozicao > 0 && pozicao < ListaNomes.Length)
             {
-                for ( int i = 0; i < pozicao; i++)
+                for (int i = 0; i < pozicao; i++)
                 {
                     ListaNomes[i] = ListaNomes[i + 1];
-                    }
+                }
+                ListaNomes[ListaNomes.Length - 1] = null;
                 Console.WriteLine("Nome removido!");
             }
             else
             {
                 Console.WriteLine("A pozição digitada não existe, tente novamente");
-                return;    
+                return;
             }
+        }
+
+        public static void AdicionarEspessifico(string[] ListaNomes)
+        {
+            bool loopMenu = true;
+
+            while (loopMenu)
+            {
+                Console.WriteLine($"Escolha uma pozição: (0 até {ListaNomes.Length - 1})");
+                int pozicao = int.Parse(Console.ReadLine());
+
+                if ( pozicao > 0 && pozicao <= ListaNomes.Length)
+                {
+                    Console.WriteLine("Digite o nome que deseja adicionar na lista:");
+                    string nomeNovo = Console.ReadLine();
+
+                    ListaNomes[pozicao] = nomeNovo;
+
+                    Console.WriteLine($"O nome: {nomeNovo}, foi adicionado na pozição: {pozicao}");
+                    loopMenu = false;
+                }
+                else
+                {
+                    Console.WriteLine("Pozição inválida, tente novamente outra pozição");
+                    break;
+                }
             }
-   
+        }
     }
 }
